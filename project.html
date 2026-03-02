@@ -13,7 +13,7 @@
             display: flex;
             flex-direction: column;
             min-height: 100vh; 
-            overflow: hidden;
+            overflow-x: hidden;
         }
         body::before{
             content: "";
@@ -38,32 +38,41 @@
             margin-bottom:10px;
         }
         .content {
-            width:2000px;
+            position: relative;
+            width:100%;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 40px 20px;
             font-size:large;
             font-weight: bold;
             line-height:1.6;
             font-family: "Berlin Sans SB", serif;
             flex: 1 1 auto;
-            
         }
         .content p, .content h3 {
             margin: 10px;
         }
         #p1, #p2, #p3, #p4{
-            max-width: 350px;
-            height:max-content;
+            width: 300px;
             background-color: #d2d1d1;
             border: 1px solid #333;
-            margin-bottom: 40px;
-            float:left;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            float: left;           
             margin-left: 50px;
         }
-        .content::after {
-            content: "";
-            display: table;
-            clear: both;
+        .box-group {
+            
+            position: absolute;
+            left: 0;
+            right: 0;
+            top:0;
+            bottom:0;
+            margin:auto;
+
+           
         }
+
         .footer{
             background-color: #b3b2b2;
             text-align:center;
@@ -79,21 +88,23 @@
       <h1>My Projects</h1>
     </div>
     <div class="content">
-        <div id="p1">
-        <h3>Project 1</h3>
-        <p>This is the first project in my portfolio.</p>
-        </div>
-        <div id="p2">
-        <h3>Project 2</h3>
-        <p>This is the second project in my portfolio.</p>
-        </div>
-        <div id="p3">
-        <h3>Project 3</h3>
-        <p>This is the third project in my portfolio.</p>
-        </div>
-        <div id="p4">
-        <h3>Project 4</h3>  
-        <p>This is the fourth project in my portfolio.</p>
+        <div class="box-group">
+            <div id="p1">
+            <h3>Project 1</h3>
+            <p>This is the first project in my portfolio.</p>
+            </div>
+            <div id="p2">
+            <h3>Project 2</h3>
+            <p>This is the second project in my portfolio.</p>
+            </div>
+            <div id="p3">
+            <h3>Project 3</h3>
+            <p>This is the third project in my portfolio.</p>
+            </div>
+            <div id="p4">
+            <h3>Project 4</h3>  
+            <p>This is the fourth project in my portfolio.</p>
+            </div>
         </div>
     </div>
     <div class="footer">
